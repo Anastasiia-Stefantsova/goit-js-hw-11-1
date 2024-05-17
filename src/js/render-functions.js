@@ -1,8 +1,11 @@
 import SimpleLightbox from "simplelightbox";
 
 export const listImg = document.querySelector('.list');
-let lightbox;
-
+const lightbox = new SimpleLightbox('.item-list-link', {
+    captionsData: 'alt', 
+    captionDelay: 250 ,
+    overlayOpacity: 0.8,
+  });
 export const markupInterface = (data) => {
     const markup = data.hits.map((hit) => {
     return `
@@ -32,12 +35,6 @@ export const markupInterface = (data) => {
     `;
 }).join("");
 listImg.innerHTML = markup;
-
-lightbox = new SimpleLightbox('.item-list-link', {
-    captionsData: 'alt', 
-    captionDelay: 250 ,
-    overlayOpacity: 0.8,
-  });
 
 lightbox.refresh();
 };
