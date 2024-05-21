@@ -1,7 +1,7 @@
 import SimpleLightbox from "simplelightbox";
 
 export const listImg = document.querySelector('.list');
-const lightbox = new SimpleLightbox('.item-list-link', {
+    const lightbox = new SimpleLightbox('.item-list-link', {
     captionsData: 'alt', 
     captionDelay: 250 ,
     overlayOpacity: 0.8,
@@ -38,3 +38,4 @@ listImg.innerHTML = markup;
 
 lightbox.refresh();
 };
+
